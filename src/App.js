@@ -88,7 +88,7 @@ class App extends React.Component {
         celsius: this.calCelsius(response.main.temp),
         temp_max: this.calCelsius(response.main.temp_max),
         temp_min: this.calCelsius(response.main.temp_min),
-        description: translateDescription (response.weather[0].description),
+        description: translateDescription(response.weather[0].description),
         error: false
       });
   
