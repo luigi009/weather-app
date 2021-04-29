@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'weather-icons/css/weather-icons.css'
 import React from 'react'
 import Form from './app_component/form.component'
-
+import Time from './app_component/Time'
 
 //api call api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
 const API_key ="c0966deb384170eb6f1c92b0a0c9c803";
@@ -102,6 +102,7 @@ class App extends React.Component {
   render() {
     return(
       <div className="App">
+        <Time />
         <Form loadweather={this.getWeather} error={this.state.error}/>
         <Weather 
         city={this.state.city} 
