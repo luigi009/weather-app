@@ -1,0 +1,73 @@
+form {
+    margin-top: 1rem;;
+}
+
+form input[name="city"],
+form input[name="country"] {
+    background-color: transparent;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    width: 25%;
+    font-weight: bold;
+    text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+form input[name="city"]::placeholder,
+form input[name="country"]::placeholder {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.623);
+    text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+form input[name="city"]:focus,
+form input[name="country"]:focus {
+    color: white;
+    border-bottom: 1px solid white;
+    text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+form input:focus {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: white;
+}
+
+form-input
+.container::-webkit-input-placeholder {
+    color: white !important;
+}
+
+.btn-result-weather {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 3% auto;
+    border-radius: 50px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.btn-result-weather:hover {
+    color: white;
+    opacity: 0.7;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.btn-result-weather:focus {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.city-country-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 991px) {
+
+    form input[name="city"],
+    form input[name="country"] {
+    width: 100%;
+}
+}
