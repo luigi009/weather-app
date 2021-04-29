@@ -8,13 +8,13 @@ const Form = props => {
             <form onSubmit={props.loadweather}>
                 <div className="city-country-info">
                     <div className="d-flex justify-content-center">
-                        <input type="text" className="form-control slide-in-right" placeholder={translateDescription("City")} name="city" />
+                        <input type="text" className="form-control slide-in-right" placeholder="City" name="city" />
                     </div>
                     <div className="d-flex justify-content-center">
-                        <input type="text" className="form-control slide-in-left" placeholder={translateDescription("Country")} name="country" />
+                        <input type="text" className="form-control slide-in-left" placeholder="Country" name="country" />
                     </div>
                     <div className="d-flex justify-content-center">
-                        <button className="btn btn-result-weather bounce-in-top">{translateDescription("Search Weather")}</button>
+                        <button className="btn btn-result-weather bounce-in-top">Search Weather</button>
                     </div>
                 </div>
             </form>
@@ -25,17 +25,9 @@ const Form = props => {
 function error(){
     return(
         <div className="alert alert-danger mx-5" role="alert">
-            {translateDescription("Please Enter City and Country")}
+            Please Enter City and Country
         </div>
     );
 }
-
-function translateDescription(description) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt&dt=t&q=" + description, false);
-    xhttp.send(null);
-    var response = JSON.parse(xhttp.responseText);
-    return response[0][0][0];
-  }
 
 export default Form;

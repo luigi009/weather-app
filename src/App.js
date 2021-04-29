@@ -6,7 +6,6 @@ import React from 'react'
 import Form from './app_component/form.component'
 import Time from './app_component/Time'
 
-//api call api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
 const API_key ="c0966deb384170eb6f1c92b0a0c9c803";
 
 class App extends React.Component {
@@ -88,7 +87,7 @@ class App extends React.Component {
         celsius: this.calCelsius(response.main.temp),
         temp_max: this.calCelsius(response.main.temp_max),
         temp_min: this.calCelsius(response.main.temp_min),
-        description: translateDescription(response.weather[0].description),
+        description: response.weather[0].description,
         error: false
       });
   
@@ -116,14 +115,6 @@ class App extends React.Component {
       </div>
     );
   }
-}
-
-function translateDescription(description) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt&dt=t&q=" + description, false);
-  xhttp.send(null);
-  var response = JSON.parse(xhttp.responseText);
-  return response[0][0][0];
 }
 
 export default App;
