@@ -1,4 +1,32 @@
-# Getting Started with Create React App
+# Wheather App
+
+## Description
+
+This is a simple weather app that shows the weather of a city. It uses the [OpenWeatherMap](https://openweathermap.org/) API to get the weather data. And to get the icons, it uses the [Weather Icons](https://github.com/erikflowers/weather-icons.git) library.
+
+## Installation
+
+To install the app, you need to have [Node.js](https://nodejs.org/en/) installed on your computer. Then, you need to clone the repository and install the dependencies.
+
+```bash
+git clone
+cd weather-app
+npm install
+```
+
+## Usage
+
+To run the app, you need to change the API key in the `src/App.js` file. Then, you can run the app with the following command:
+
+```bash
+npm start
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
